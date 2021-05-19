@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "utilities",
+  "version": "${version}",
+  "name": "Utilities",
+  "description": "",
+  "authors": [
+    "anhcraft"
+  ],
+  "contact": {},
+  "license": "unlicense",
+  "icon": "assets/utilities/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.anhcraft.utilities.Utilities"
+    ]
+  },
+  "mixins": [
+    "Utilities.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.9.1+build.205",
+    "minecraft": "1.16.1",
+    "libgui": ">=2.3.0"
+  }
+}
