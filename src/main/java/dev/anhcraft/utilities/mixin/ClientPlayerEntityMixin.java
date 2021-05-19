@@ -5,7 +5,6 @@ import dev.anhcraft.utilities.Utilities;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -34,7 +33,6 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
         if (ThreadLocalRandom.current().nextInt(0, 200) == 0) {
             getEntityWorld().getEntities(this, getBoundingBox().expand(32), entity -> entity instanceof PlayerEntity).stream().map(e -> e.getName().copy().append(" is nearby! (Distance: "+String.format("%.2f", e.distanceTo(this))+")")).forEach(m -> sendMessage(m, false));
         }*/
-        CraftingRecipe
         Utilities.getInstance().getPlayerTracker().onTick(this);
     }
 }
